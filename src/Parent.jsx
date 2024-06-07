@@ -1,9 +1,7 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
 function Parent() {
-  return (
-    <Outlet />
-  )
+  return <Outlet />;
 }
 
-export default Parent
+export default Parent;
