@@ -13,6 +13,10 @@ import Checkout from './Checkout.jsx'
 import Orders from './Orders.jsx'
 import ProductDescription from './ProductDescription.jsx'
 import featuredProductDescription from './featuredProductDescription.jsx'
+import { createContext } from 'react'
+
+export const context = createContext();
+
 
 function Ecommerce() {
   const [products, setProducts] = useState([])
