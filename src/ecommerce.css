@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.blogs{
+    margin: 0,2rem;
+    padding: 5px;
+}
+.blogs h1{
+    margin-bottom:2rem ;
+}
+.blog{
+    margin-bottom: 1rem;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    margin:5px;
+    padding:2px;
+    align-items: center;
+}
+header ul{
+    display:flex;
+    margin-right: 30px;
+    gap:5rem;
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    font-size: large;
+}
+
+/* main{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+} */
+
+img{
+    width: 100px;
+    height: 150px;
+}
+.products{
+    /* width: 200px; */
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin:2rem;
+}
+.product{
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

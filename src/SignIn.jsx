@@ -12,7 +12,7 @@ function SignIn() {
         <input type='password' id='pswd'/>
         <button type = 'submit'>LOGIN</button>
         <button type = 'button'>Guest User</button>
-        <p>Not a member yet?  <span><a href=''>Register</a></span></p>
+        <p>Not a member yet?  <span><a href='/registration'>Register</a></span></p>
     </div>
   )
 }

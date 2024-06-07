@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Header() {
-    const loggedIn = true;
+    const loggedIn = false;
     return (<>
         {(!loggedIn) ?
             <header>

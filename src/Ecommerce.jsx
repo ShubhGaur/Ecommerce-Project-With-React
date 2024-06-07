@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Parent from './Parent.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import UserHeader from './UserHeader.jsx'
-// import SignIn from './SignIn'
-// import Registration from './Registration'
+import SignIn from './SignIn'
+import Registration from './Registration'
 import Header from './Header'
 import Hommie from './Hommie'
 import Cart from './Cart.jsx'
@@ -12,29 +12,28 @@ import About from './About.jsx'
 import Checkout from './Checkout.jsx'
 import Orders from './Orders.jsx'
 import ProductDescription from './ProductDescription.jsx'
-import featuredProductDescription from './featuredProductDescription.jsx'
 import { createContext } from 'react'
 
 export const context = createContext();
 
 
 function Ecommerce() {
-  const [products, setProducts] = useState([])
   // const [featured, setFeatured] = useState([])
+  let userData = [];
 
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((result) => {
-        setProducts(result);
-      })
-
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       setProducts(result);
+  //       })
+        
+  //       }, []);
 
   return (<>
     <context.Provider value = {{
-        products,
+        userData
     }}
     >
         <BrowserRouter>
@@ -43,7 +42,7 @@ function Ecommerce() {
             <Routes>
                 <Route path='/' element={<Parent />}>
                     <Route index element={<Hommie />}></Route>
-                    <Route path='featuredProductDescription/:id' element={<featuredProductDescription />}></Route>               
+                    <Route path='ProductDescription/:id' element={<ProductDescription />}></Route>               
                 </Route>
                 <Route path='/about' element={<About />}></Route>
                 <Route path='/products' element={<Parent />}>
@@ -53,6 +52,8 @@ function Ecommerce() {
                 <Route path='/cart' element={<Cart />}></Route>
                 <Route path='/cart' element={<Checkout />}></Route>
                 <Route path='/orders' element={<Orders />}></Route>
+                <Route path='/registration' element={<Registration />}></Route>
+                <Route path='/signin' element={<SignIn />}></Route>
 
                 
             </Routes>
